@@ -60,7 +60,7 @@ module.exports = {
     "favIconColor": "grey",
     "datas": [{
       "key": "zqydbody",
-      "val": ""
+      "val": "let zqydbody= $.isNode() ? (process.env.zqydbody ? process.env.zqydbody : "") : ($.getdata('zqydbody') ? $.getdata('zqydbody') : "")"
        
     }],
     "sessions": [],
