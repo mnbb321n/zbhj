@@ -3,21 +3,14 @@ name: zzk
 on:
   workflow_dispatch:
   schedule:
-    - cron: 7 8,11 * * *
-  watch:
-    types: started
-  repository_dispatch:
-    types: bean_change
+     - cron: 30 3,13 * * *
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest    
     if: github.event.repository.owner.id == github.event.sender.id
-    env:
-        zqydbody: ${{ secrets.ZQYDBODY }}
-        zqydbody2: ${{ secrets.ZQYDBODY2 }}
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
@@ -25,15 +18,9 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【zqkkhear】'
-        if: env.zqydbody
+          npm install cron
+          npm install request
+      - name: '运行 【kkz】'
         run: |
-          node zqkkhear.js
-        
-         
-      - name: '运行 【zqkkhear二】'
-        if: env.zqydbody2
-        run: |
-          node zqkkhear.js
-       
+          node Task/zqkkhear.js
     
