@@ -29,12 +29,11 @@ jobs:
         if: env.zqydbody
         run: |
           node zqkkhear.js
-        env:
-          zqydbody: ${{ secrets.ZQYDBODY }}
+
          
       - name: '运行 【zqkkhear二】'
         if: env.zqydbody2
         run: |
           node zqkkhear.js
-        env:
-          zqydbody: ${{ secrets.ZQYDBODY2 }}
+     
+       
