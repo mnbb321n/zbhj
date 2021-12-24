@@ -61,7 +61,7 @@ module.exports = {
     "datas": [{
       "key": "zqydbody",
       "val": ""
-       let zqydbody= $.isNode() ? (process.env.zqydbody ? process.env.zqydbody : "") : ($.getdata('zqydbody') ? $.getdata('zqydbody') : "") 
+       
     }],
     "sessions": [],
     "isLoaded": true
