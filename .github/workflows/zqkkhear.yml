@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        zqydbody1: ${{ secrets.ZQYDBODY1 }}
+        zqydbody: ${{ secrets.ZQYDBODY }}
         zqydbody2: ${{ secrets.ZQYDBODY2 }}
         zqydbody3: ${{ secrets.ZQYDBODY3 }}
         zqydbody4: ${{ secrets.ZQYDBODY4 }}
@@ -33,7 +33,7 @@ jobs:
         run: |
           node zqkkhear.js
         env:
-          zqydbody1: ${{ secrets.ZQYDBODY1 }}
+          zqydbody: ${{ secrets.ZQYDBODY }}
           zqydbody2: ${{ secrets.ZQYDBODY2 }}
           zqydbody3: ${{ secrets.ZQYDBODY3 }}
     
