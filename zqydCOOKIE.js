@@ -11,7 +11,7 @@ module.exports = {
       "desc": "当前抓取ck记录的账号序号，如：1、2、3、4"
     }, {
       "id": "zqydCount",
-      "name": "账号个数",
+      "name": "1",
       "val": process.env.zqydCount,
       "type": "number",
       "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
