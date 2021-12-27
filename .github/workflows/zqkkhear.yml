@@ -29,7 +29,7 @@ jobs:
           npm install cron
           npm install request
       - name: '运行 【zqkkhear】'
-        if: env.TxStockWxHeader
+        if: env.zqydbody
         run: |
           node zqkkhear.js
         env:
