@@ -6,21 +6,34 @@ on:
      - cron: 51 6,13 * * *
 jobs:
   build:
-    runs-on: ubuntu-latest    
+
+    runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
+    env:
+        zqydbody1: ${{ secrets.ZQYDBODY1 }}
+        zqydbody2: ${{ secrets.ZQYDBODY2 }}
+        zqydbody3: ${{ secrets.ZQYDBODY3 }}
+        zqydbody4: ${{ secrets.ZQYDBODY4 }}
+        zqydbody5: ${{ secrets.ZQYDBODY5 }}
+        zqydbody6: ${{ secrets.ZQYDBODY6 }}
+     
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
       - name: npm install
         run: |
-          npm install
+          npm install 
           npm install cron
           npm install request
-      - name: '运行 【kkz】'
+      - name: '运行 【zqkkhear】'
+        if: env.TxStockWxHeader
         run: |
           node zqkkhear.js
+        env:
+          zqydbody1: ${{ secrets.ZQYDBODY1 }}
+          zqydbody2: ${{ secrets.ZQYDBODY2 }}
+          zqydbody3: ${{ secrets.ZQYDBODY3 }}
     
