@@ -1,16 +1,20 @@
-name: zzk
+name: kkz
 
 on:
   workflow_dispatch:
   schedule:
-     - cron: 51 6,13 * * *
+    - cron: 51 6,13 * * *
+  watch:
+    types: started
+  repository_dispatch:
+    types: bean_change
 jobs:
   build:
 
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     env:
-        zqydbody: ${{ secrets.ZQYDBODY }}
+        zqydbody1: ${{ secrets.ZQYDBODY1 }}
         zqydbody2: ${{ secrets.ZQYDBODY2 }}
         zqydbody3: ${{ secrets.ZQYDBODY3 }}
         zqydbody4: ${{ secrets.ZQYDBODY4 }}
@@ -29,10 +33,12 @@ jobs:
           npm install cron
           npm install request
       - name: '运行 【zqkkhear】'
-        if: env.zqydbody
+        if: env.zqydbody1
         run: |
           node zqkkhear.js
         env:
-          zqydbody: ${{ secrets.ZQYDBODY }}
-       
-    
+          zqydbody1: ${{ secrets.ZQYDBODY1 }}
+          zqydbody2: ${{ secrets.ZQYDBODY2 }}
+          zqydbody3: ${{ secrets.ZQYDBODY3 }}
+          zqydbody4: ${{ secrets.ZQYDBODY4 }}
+  
