@@ -37,8 +37,8 @@ jobs:
         run: |
           node zqkkhear.js
         env:
-          zqydbody: ${{ secrets.ZQYDBODY }}
           zqydbody2: ${{ secrets.ZQYDBODY2 }}
-          zqydbody3: ${{ secrets.ZQYDBODY3 }}
           zqydbody4: ${{ secrets.ZQYDBODY4 }}
+          zqydbody: ${{ secrets.ZQYDBODY }}
+          zqydbody3: ${{ secrets.ZQYDBODY3 }}
   
