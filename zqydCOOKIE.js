@@ -12,7 +12,7 @@ module.exports = {
     }, {
       "id": "zqydCount",
       "name": "1",
-      "val": "4",
+      "val": "2",
       "type": "number",
       "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
     }, {
@@ -59,11 +59,11 @@ module.exports = {
     "favIcon": "mdi-star-outline",
     "favIconColor": "grey",
     "datas": [{
-      "key": "zqydbody",
-      "val": process.env.zqydbody
-    }, {
       "key": "zqydbody2",
       "val": process.env.zqydbody2
+    }, {
+      "key": "zqydbody4",
+      "val": process.env.zqydbody4
     }, {
       "key": "zqydbody3",
       "val": process.env.zqydbody3
