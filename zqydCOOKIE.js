@@ -1,7 +1,7 @@
 module.exports = {
     "id": "zqyd",
     "name": "钟情阅读",
-    "keys": ["zqydbody2","zqydbody4","zqydbody","zqydbody3","zqydbody5","zqydbody6","zqydbody7",],
+    "keys": ["zqydbody","zqydbody2","zqydbody3","zqydbody4","zqydbody5","zqydbody6","zqydbody7",],
     "author": "@tom",
     "settings": [{
       "id": "zqydSuffix",
@@ -59,16 +59,16 @@ module.exports = {
     "favIcon": "mdi-star-outline",
     "favIconColor": "grey",
     "datas": [{
+      "key": "zqydbody",
+      "val": process.env.zqydbody
+    }, {
       "key": "zqydbody2",
       "val": process.env.zqydbody2
     }, {
-      "key": "zqydbody4",
-      "val": process.env.zqydbody4
-    }, {
-      "key": "zqydbody1",
+      "key": "zqydbody3",
       "val": process.env.zqydbody3
     }, {
-      "key": "zqydbody3",
+      "key": "zqydbody4",
       "val": process.env.zqydbody4
     }, {
       "key": "zqydbody5",
