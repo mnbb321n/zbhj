@@ -60,10 +60,10 @@ module.exports = {
     "favIconColor": "grey",
     "datas": [{
       "key": "zqydbody",
-      "val": process.env.zqydbody2
+      "val": process.env.zqydbody
     }, {
       "key": "zqydbody2",
-      "val": process.env.zqydbody4
+      "val": process.env.zqydbody2
     }, {
       "key": "zqydbody3",
       "val": process.env.zqydbody3
